@@ -4,7 +4,9 @@ import Prediction from "./pages/Prediction"
 import Info from "./pages/Info"
 import Schedule from "./pages/Schedule"
 import Login from "./pages/Login"
+import SignUp from "./pages/SignUp"
 import { Route, Routes} from "react-router-dom" 
+
 
 
 
@@ -21,6 +23,7 @@ function App(){
                 <Route path="/Info" element={<Info />} />
                 <Route path="/Schedule" element={<Schedule />} />
                 <Route path="/Login" element={<Login />} />
+                <Route path="/SignUp" element ={<SignUp/>} />
             </Routes>
         </div>
         </>

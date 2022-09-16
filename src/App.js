@@ -1,10 +1,13 @@
 import Navbar from "./Navbar"
-import home from "./pages/home"
-import info from "./pages/info"
-import login from "./pages/login"
-import prediction from "./pages/prediction"
-import schedule from "./pages/schedule"
+import Home from "./pages/Home"
+import Prediction from "./pages/Prediction"
+import Info from "./pages/Info"
+import Schedule from "./pages/Schedule"
+import Login from "./pages/Login"
 import { Route, Routes} from "react-router-dom" 
+
+
+
 
 
 function App(){
@@ -13,11 +16,11 @@ function App(){
         <Navbar />
         <div className="containter">
             <Routes>
-                <Route path="/" element={<home />} />
-                <Route path="/prediction" element={<prediction />} />
-                <Route path="/info" element={<info />} />
-                <Route path="/schedule" element={<schedule />} />
-                <Route path="/login" element={<login />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/Prediction" element={<Prediction />} />
+                <Route path="/Info" element={<Info />} />
+                <Route path="/Schedule" element={<Schedule />} />
+                <Route path="/Login" element={<Login />} />
             </Routes>
         </div>
         </>

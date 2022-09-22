@@ -4,8 +4,8 @@ import * as ROUTES from '../components/Constants/routes'
 
 import SignOutButton from '../components/SignOut';
 
-const Navigation = () => (
-  <div>
+const Navigation  = () => (
+  <div  className='nav' >
     <ul>
       <li>
       <Link to={ROUTES.HOME}>Home</Link>

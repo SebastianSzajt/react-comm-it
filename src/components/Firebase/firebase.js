@@ -21,7 +21,7 @@ class Firebase {
 
   // *** Ayth API ***
 
-diCreateUserWithEmailAndPassword = (email, password) =>
+doCreateUserWithEmailAndPassword = (email, password) =>
   this.auth.createUserWithEmailAndPassword(email, password);
 
 doSighInWithEmailAndPassword = (email, password) =>

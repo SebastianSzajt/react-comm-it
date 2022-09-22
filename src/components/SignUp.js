@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FirebaseContext } from './Firebase';
+import { withFirebase } from '../components/Firebase';
 
+import * as ROUTES from '../components/Constants/routes';
+import { withNavigate } from '../components/Navigation';
 
 const INITIAL_STATE = {
   username: '',
@@ -11,7 +13,7 @@ const INITIAL_STATE = {
   error: null
 }
 
-class SignUpForm extends Component {
+class SignUpFormBase extends Component {
   constructor(props) {
     super(props);
 
@@ -25,6 +27,7 @@ class SignUpForm extends Component {
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then( authUser => {
         this.setState({ ...INITIAL_STATE });
+        this.props.navigate(ROUTES.HOME);
       })
       .catch( error => {
         this.setState({ error });
@@ -91,18 +94,18 @@ class SignUpForm extends Component {
   }
 }
 
+const SignUpForm = withNavigate(withFirebase(SignUpFormBase));
+
 const SignUpLink = () => {
   <p>
-    Don't have an account? <Link to="/SignUp" >Sign Up</Link>
+    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
   </p>
 }
 
 const SignUp = () => (
   <div>
     <h1>SignUp</h1>
-    <FirebaseContext.Consumer>
-      {firebase => <SignUpForm firebase={firebase}/>}
-    </FirebaseContext.Consumer>
+    <SignUpForm/>
   </div>
 );
 

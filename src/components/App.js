@@ -36,7 +36,7 @@ class AppComponent extends Component {
       <React.StrictMode>
           <BrowserRouter>
               <Navigation authUser={this.state.authUser}/>
-              <hr />
+            
               <Routes>
                 <Route exact path={ROUTES.LANDING} element={<LandingPage />} />
                 <Route path={ROUTES.SIGN_UP} element={<SignUpPage/>} />

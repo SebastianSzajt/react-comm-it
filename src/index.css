@@ -44,3 +44,24 @@ padding:  0 1rem;
   background-color: #777;
 }
 
+
+.boxbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 20vh;
+  background-color: rgb(150, 70, 70);
+  margin: 3.5rem;
+}
+
+.countdown {
+display: flex;
+justify-content: space-around;
+text-align: center;
+}
+
+.day,.hour,.minute,.second{
+font-size: 2rem;
+margin: 3rem;
+}

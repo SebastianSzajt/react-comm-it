@@ -51,6 +51,8 @@ padding:  0 1rem;
   justify-content: center;
   flex-direction: column;
   min-height: 20vh;
+  max-height: 50rem;
+  max-width: 100rem;
   background-color: rgb(150, 70, 70);
   margin: 3.5rem;
 }

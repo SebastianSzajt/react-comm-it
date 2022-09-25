@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import * as ROUTES from '../components/Constants/routes'
-import LandingPage from '../components/Landing';
 import SignUpPage from '../components/SignUp';
 import SignInPage from '../components/SignIn';
 import PredictionPage from '../components/Prediction'
@@ -36,10 +35,8 @@ class AppComponent extends Component {
       <React.StrictMode>
           <BrowserRouter>
               <Navigation authUser={this.state.authUser}/>
-            
               <Routes>
-                <Route exact path={ROUTES.LANDING} element={<LandingPage />} />
-                <Route path={ROUTES.SIGN_UP} element={<SignUpPage/>} />
+                <Route exact path={ROUTES.SIGN_UP} element={<SignUpPage/>} />
                 <Route path={ROUTES.SIGN_IN} element={<SignInPage/>} />
                 <Route path={ROUTES.HOME} element={<HomePage />} />
                 <Route path={ROUTES.INFO} element={<InfoPage/>} />

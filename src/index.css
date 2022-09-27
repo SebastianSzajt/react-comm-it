@@ -53,7 +53,6 @@ padding:  0 1rem;
   min-height: 20vh;
   max-height: 50rem;
   max-width: 100rem;
-  background-color: rgb(150, 70, 70);
   margin: 3.5rem;
 }
 
@@ -61,9 +60,54 @@ padding:  0 1rem;
 display: flex;
 justify-content: space-around;
 text-align: center;
+
 }
 
 .day,.hour,.minute,.second{
-font-size: 2rem;
-margin: 3rem;
+display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgb(168, 51, 51);
+  font-size: 3rem;
+  
+  margin: 5rem;
+  /* circle */
+  padding: 1rem;
+  border: 0.3rem solid black;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
 }
+
+.Collapsible__trigger {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  border: 1px solid rgb(20, 14, 14);
+  padding: 10px;
+  background: rgba(150, 79, 89, 0.959);
+  color: rgb(252, 240, 240);
+  
+  
+}
+.Collapsible:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid lightGrey;
+  border-top: 0;
+  background: rgb(132, 138, 138);
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  
+}
+

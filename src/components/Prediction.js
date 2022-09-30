@@ -77,7 +77,7 @@ const groupData = [
 ];
 
 const Prediction = () => (
-  <div style={{ backgroundImage: `messi`,backgroundRepeat:"no-repeat", height: "60rem", display: "flex", flexDirection: "column", backgroundSize:"120rem"  }}>
+  <div style={{ backgroundColor: "" ,backgroundRepeat:"no-repeat", height: "60rem", display: "flex", flexDirection: "column", backgroundSize:"120rem"  }}>
     <h1 className="background">Prediction</h1>
     <ul className="groupdata" key={groupData}>
       {groupData.map((group) => (
@@ -89,7 +89,7 @@ const Prediction = () => (
 );
 
 const Group = ({ group }) => (
-  <div>
+  <div >
     <li key={group}>Group: {group.id}</li>
     <ul className="groupbox">
       {group.teams.map((team) => (

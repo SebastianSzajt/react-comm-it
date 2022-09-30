@@ -1,7 +1,7 @@
 
 
 export const groupData = [     
-            { group:3, position: 1, teamName: "Argentina", flag: '\u{1F984}'},
+            { group:3, position: 1, teamName: "Argentina"},
             { group:4, position: 2, teamName: "Australia"},
             { group:6, position: 1, teamName: "Belgium"},
             { group:7, position: 1, teamName: "Brazil"},

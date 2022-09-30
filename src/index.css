@@ -87,7 +87,7 @@ body {
   position: relative;
   border: 1px solid rgb(20, 14, 14);
   padding: 10px;
-  background: rgba(134, 101, 106, 0.959);
+  background: rgba(129, 104, 108, 0.959);
   color: rgb(252, 240, 240);
   font-size: 18px;
   
@@ -103,7 +103,7 @@ body {
 
 .Collapsible__contentInner {
   padding: 10px;
-  border: 1px solid rgb(138, 108, 108);
+  border: 1px solid rgb(17, 12, 12);
   border-top: 0;
   background: rgb(177, 197, 197);
   margin-bottom: 10px;

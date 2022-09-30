@@ -1,17 +1,17 @@
-src/index.cssimport {Argentina} from "./Pictures/Argentina.jpg"
+
 import React from "react"
 import Collapsible from 'react-collapsible';
 
-
+const emojiFlags = require('emoji-flags');
 
 function Info() {
   return (
     <div>
-    <Collapsible  transitionTime={100} trigger="Argentina" >
+    <Collapsible  transitionTime={100} trigger= {`Argentina`} >
       <p>
-        This is the collapsible content. It can be any element or React
-        component you like.
+      Argentina is one of the most successful national football teams in the world, having won two World Cups in 1978 and 1986. Argentina has been runners up three times in 1930, 1990 and 2014.
       </p>
+      <p>They are one of the favourites going into the tournament. Will they be able to bring it home?</p>
     </Collapsible>
 
     <Collapsible transitionTime={100} trigger="Australia">

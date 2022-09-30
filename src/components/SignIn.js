@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 
 import { SignUpLink } from '../components/SignUp';
 import { withFirebase } from '../components/Firebase';
-
+import zidane from "./Pictures/zidane.jpg"
 import { withNavigate } from '../components/Navigation';
 import * as ROUTES from '../components/Constants/routes';
+
+
 const SignInPage = () => (
-  <div>
-    <h1>SignIn</h1>
+  <div style={{ backgroundImage: `url(${zidane})`}} className='root' >
+    <h1 className='login'>Sign In</h1>
     <SignInForm />
     <SignUpLink />
   </div>

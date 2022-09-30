@@ -1,24 +1,23 @@
 * {
-  box-sizing:border-box ;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 body {
   margin: 0;
- 
 }
 
 .nav {
-background-color: #333;
-color: white;
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-gap: 2rem;
-padding:  0 1rem;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1rem;
 }
 
-.nav ul{
+.nav ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -26,24 +25,21 @@ padding:  0 1rem;
   gap: 1rem;
 }
 
-
-.nav a{
+.nav a {
   color: inherit;
   text-decoration: none;
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
-.nav li:active{
-  background-color: #555; 
-
+.nav li:active {
+  background-color: #555;
 }
-.nav li:hover{
+.nav li:hover {
   background-color: #777;
 }
-
 
 .boxbox {
   display: flex;
@@ -57,26 +53,30 @@ padding:  0 1rem;
 }
 
 .countdown {
-display: flex;
-justify-content: space-around;
-text-align: center;
-
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
-.day,.hour,.minute,.second{
-display: flex;
+.day,
+.hour,
+.minute,
+.second {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
   background-color: rgb(168, 51, 51);
   font-size: 3rem;
-  
+  transform: translate(0,50%);
+
   margin: 5rem;
   /* circle */
   padding: 1rem;
-  border: 0.3rem solid black;
+
   width: 10rem;
   height: 10rem;
+  border: 0.3rem solid black;
   border-radius: 100%;
 }
 
@@ -87,13 +87,14 @@ display: flex;
   position: relative;
   border: 1px solid rgb(20, 14, 14);
   padding: 10px;
-  background: rgba(150, 79, 89, 0.959);
+  background: rgba(134, 101, 106, 0.959);
   color: rgb(252, 240, 240);
+  font-size: 18px;
   
   
 }
 .Collapsible:after {
-  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  content: "\02795"; /* Unicode character for "plus" sign (+) */
   font-size: 13px;
   color: white;
   float: right;
@@ -102,12 +103,83 @@ display: flex;
 
 .Collapsible__contentInner {
   padding: 10px;
-  border: 1px solid lightGrey;
+  border: 1px solid rgb(138, 108, 108);
   border-top: 0;
-  background: rgb(132, 138, 138);
+  background: rgb(177, 197, 197);
   margin-bottom: 10px;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
+}
+
+.groupdata {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+ background: rgb(255, 255, 255);
+ 
+}
+
+.groupbox {
+  border: #333;
+
+  background: rgb(255, 255, 255);
+  border: 0.3rem solid black;
+  border-radius: 10%;
   
 }
 
+.background {
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+
+
+/* */
+
+body.fancy  {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: black;
+  height: 100vh;
+  width: 100vw;
+}
+
+.fancy {
+  position: absolute;
+  
+  transform: translate(0,-100%);
+  display: flex;
+  color: #e27250;
+  font-size: 124px;
+  letter-spacing: 8px;
+  
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login & Sign up  */
+.root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  padding-top: 60px;
+}
+
+.login{
+  max-width: 350px;
+  margin: 0 auto 20px;
+  border-radius: 4px;
+  background-color: #FFF;
+  padding: 20px;
+  box-sizing: border-box;
+}

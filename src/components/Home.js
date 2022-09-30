@@ -31,7 +31,7 @@ setInterval(countdown, 1000);
 const Home = () => (
 <body style={{ backgroundImage: `url(${messi})`,backgroundRepeat:"no-repeat", height: "60rem", display: "flex", flexDirection: "column", backgroundSize:"120rem"  }}>
     <div className = "boxbox" >
-        <h2>World Cup in</h2>
+        <span className="fancy">World Cup Starts In:</span>
         <div className="countdown">
             <div className="container-days">
                 <h3 className ="day">Time</h3>

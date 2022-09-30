@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withFirebase } from '../components/Firebase';
-
+import maradona from "./Pictures/maradona.jpg"
 import * as ROUTES from '../components/Constants/routes';
 import { withNavigate } from '../components/Navigation';
+
+
 
 const INITIAL_STATE = {
   username: '',
@@ -25,6 +27,15 @@ class SignUpFormBase extends Component {
 
     this.props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
+      .then( authUser => {
+
+        return this.props.firebase
+          .user(authUser.user.uid)
+          .set({
+            username,
+            email,
+          });
+      })
       .then( authUser => {
         this.setState({ ...INITIAL_STATE });
         this.props.navigate(ROUTES.HOME);
@@ -103,8 +114,8 @@ const SignUpLink = () => {
 }
 
 const SignUp = () => (
-  <div>
-    <h1>SignUp</h1>
+  <div style={{ backgroundImage: `url(${maradona})`}} className='root' >
+    <h1 className='login'>SignUp</h1>
     <SignUpForm/>
   </div>
 );

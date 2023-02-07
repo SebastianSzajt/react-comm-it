@@ -9,7 +9,7 @@ import PredictionPage from '../components/Prediction'
 import HomePage from '../components/Home';
 import InfoPage from '../components/Info';
 import SchedulePage from '../components/Schedule';
-
+import List1Page from '../components/List1';
 import Navigation from '../components/Navigation';
 import { withFirebase } from '../components/Firebase';
 
@@ -42,6 +42,7 @@ class AppComponent extends Component {
                 <Route path={ROUTES.INFO} element={<InfoPage/>} />
                 <Route path={ROUTES.PREDICTION} element={<PredictionPage/>} />
                 <Route path={ROUTES.SCHEDULE} element={<SchedulePage/>} />
+                <Route path={ROUTES.List1} element={<List1Page/>} />
               </Routes>
           </BrowserRouter>  
       </React.StrictMode>

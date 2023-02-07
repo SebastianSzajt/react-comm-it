@@ -29,6 +29,9 @@ const NavigationAuth  = () => (
         <Link to={ROUTES.SCHEDULE}>Schedule</Link>
       </li>
       <li>
+        <Link to={ROUTES.List1}> List1 </Link>
+      </li>
+      <li>
         <SignOutButton />
       </li>
     </ul>
